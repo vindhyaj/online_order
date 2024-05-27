@@ -1,6 +1,7 @@
 from enum import Enum
 from item import Item
 from payment import PaymentMethod, Address
+from types import dict
 
 class OrderStatus(Enum):
     PENDING = 1
@@ -31,8 +32,12 @@ class Order:
     def ShippingAddress(self, address: Address):
         self.shipping_address = address
 
-    def Create(self):
+    def Place(self):
         pass
 
     def Cancel(self):
         pass
+
+def parse_order(order_request: dict):
+    pass
+
